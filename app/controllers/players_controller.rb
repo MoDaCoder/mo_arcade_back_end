@@ -18,7 +18,7 @@ class PlayersController < ApplicationController
     private
 
     def player_params
-        params.require(:player).permit(:name, :board_id)
+        params.require(:player).permit(:name, :score, :board_id)
     end
 
 end
