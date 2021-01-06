@@ -16,7 +16,6 @@ class BoardsController < ApplicationController
 
     private
     def board_params
-        byebug
         params.require(:board).permit(:name)
     end
 end
