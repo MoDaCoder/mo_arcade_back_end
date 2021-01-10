@@ -12,7 +12,6 @@
 Board.create(name: 'borb', img: 'images/borb.png')
 Board.create(name: 'borb', img: 'images/borb.png')    
 Board.create(name: 'fishbowl', img: 'images/fishbowl.png')        
-Board.create(name: 'fishbowl', img: 'images/fishbowl.png')       
 Board.create(name: 'fishbowl', img: 'images/fishbowl.png')               
 Board.create(name: 'food', img: 'images/food.png')      
 Board.create(name: 'food', img: 'images/food.png')            
