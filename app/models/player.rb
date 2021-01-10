@@ -1,3 +1,4 @@
 class Player < ApplicationRecord
-  belongs_to :board
+  has_many :scores
+  accepts_nested_attributes_for :scores
 end
