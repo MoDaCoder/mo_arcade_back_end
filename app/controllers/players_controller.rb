@@ -1,7 +1,7 @@
 class PlayersController < ApplicationController
 
     def index
-        render json: Player.all
+        render json: Player.all.map {|player| PlayerSerializer.new(player)}
     end
 
     def create
@@ -17,7 +17,7 @@ class PlayersController < ApplicationController
     private
 
     def player_params
-        params.require(:player).permit(:score, :name)
+        params.require(:player).permit(:name)
     end
 
 end
