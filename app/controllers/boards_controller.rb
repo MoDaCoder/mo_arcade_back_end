@@ -1,7 +1,9 @@
 class BoardsController < ApplicationController
     
     def index
-        render json: Board.all.map {|board| BoardSerializer.new(board)}
+        @boards = Board.all
+        render json: BoardSerializer.new(@boards)
+        # render json: Board.all.map {|board| BoardSerializer.new(board)}
     end
     
     def create
