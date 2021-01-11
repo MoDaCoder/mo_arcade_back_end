@@ -1,9 +1,6 @@
 class PlayersController < ApplicationController
 
     def index
-        # render json: Player.all
-        # @players = Player.all
-        # render json: PlayerSerializer.new(@players)
         render json: Player.all.map {|player| PlayerSerializer.new(player)}
     end
 
@@ -11,7 +8,7 @@ class PlayersController < ApplicationController
         player = Player.new(player_params)
         
         if player.save
-            render json: player
+            render json: PlayerSerializer.new(player)
         else
             byebug
         end 
