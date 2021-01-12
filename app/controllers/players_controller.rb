@@ -14,6 +14,11 @@ class PlayersController < ApplicationController
         end 
     end
 
+    def destroy
+        player = Player.find(params[:id])
+        post.destroy
+    end
+
     private
 
     def player_params
