@@ -4,13 +4,9 @@ class ScoresController < ApplicationController
     end
 
     def create
-        score = Score.new(score_params)
-        
-        if score.save
+        score = Score.new(score_params)            
+            score.save
             render json: score
-        else
-            byebug
-        end 
     end
 
     private

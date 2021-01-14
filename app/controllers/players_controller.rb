@@ -5,18 +5,11 @@ class PlayersController < ApplicationController
     end
 
     def create
-        player = Player.new(player_params)
-        
-        if player.save
+        player = Player.new(player_params) 
+         
+        player.save
             render json: PlayerSerializer.new(player)
-        else
-            byebug
         end 
-    end
-
-    def destroy
-        player = Player.find(params[:id])
-        post.destroy
     end
 
     private
