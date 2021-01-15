@@ -8,8 +8,7 @@ class PlayersController < ApplicationController
         player = Player.new(player_params) 
          
         player.save
-            render json: PlayerSerializer.new(player)
-        end 
+            render json: PlayerSerializer.new(player) 
     end
 
     private
